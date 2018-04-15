@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="background">
+	<div class="social">
+		<ul>
+			<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+			<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+			<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+		</ul>
+	</div>
+<div class="nav">
+	<a class= "a active" href="#">HOME</a>
+	<a class= "b" href="#">ABOUT</a>
+	<a class= "c" href="#">PROJECTS</a>
+	<a class= "d" href="#">CONTACT</a>
+	<a class= "e" href="#">*BONUS*</a>
+</div>
+
+
+<div class="content">
+
+	<div class="home">
+		<h1>Hein</h1>
+		<h3> Front End Web Developer</h3>
+		<div class="footer">
+			<p>&copy; 2018 HeinEnterprises.com</p>
+			<p> All Rights Reserved</p>
+		</div>
+	</div>
+
+
+	<div class="about">
+		<p><b>Hello World,</b><br>
+		I am a hobbyist on creating html pages with high class designs.
+		I love challenges and I'm graduating from <b>Union College</b>. The best part
+		about creating these websites is that, I enjoy this a lot. More importantly,
+		I am going to put most of my Computer graphic projects in here.<br></p>
+	</div>
+
+	<div class="projects">
+		<div class="image">
+			<img src="Pics/genera.png">
+			<a class="git" href="https://github.com/">GAN</a>
+		</div>
+		<div class="image">
+			<img src="Pics/scene3.png">
+			<a class="git" href="https://github.com/">Ray Tracing</a>
+		</div>
+		<div class="image">
+			<img src="Pics/p1.png">
+			<a class="git" href="https://github.com/">Sphere Collision</a>
+		</div>
+	</div>
+
+	<div class="contact">
+		<div class="contactform">
+			<form action="hein.html" method="post">
+				<h1>Upload your message to the Cloud</h1>
+				<input type="text" name="" class="inputtext" value="First Name">
+				<input type="text" name="" class="inputtext" value="Last Name">
+				<input type="text" name="" class="inputtext" value="Email">
+				<textarea cols="4" rows="6" class="inputmessage">Your Message...</textarea>
+				<input type="button" name="" class="submitbutton" value="Submit">
+			</form>
+		</div>
+
+	</div>
+	<div class="bonus">
+		<div class="hein">
+			<img src="Pics/img.jpg">
+		</div>
+		<div class="details">
+			<h2>Dedication is the KEY to every!</h2>
+		</div>
+	</div>
+
+</div>
+
+</div>
+
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		$('a').click(function(){
+			var selected = $(this);
+			$('a').removeClass('active');
+			$(selected).addClass('active');
+		});
+
+		var $a = $('.a'),
+		$b = $('.b'),
+		$c = $('.c'),
+		$d = $('.d'),
+		$e = $('.e'),
+		$home = $('.home '),
+		$about = $('.about'),
+		$projects= $('.projects'),
+		$contact = $('.contact'),
+		$bonus = $('.bonus');
+
+		$a.click(function(){
+			$home.fadeIn();
+			$about.fadeOut();
+			$projects.fadeOut();
+			$contact.fadeOut();
+			$bonus.fadeOut();
+		});
+		$b.click(function(){
+			$about.fadeIn();
+			$home.fadeOut();
+			$projects.fadeOut();
+			$contact.fadeOut();
+			$bonus.fadeOut();
+		});
+		$c.click(function(){
+			$projects.fadeIn();
+			$about.fadeOut();
+			$home.fadeOut();
+			$contact.fadeOut();
+			$bonus.fadeOut();
+		});
+		$d.click(function(){
+			$contact.fadeIn();
+			$home.fadeOut();
+			$about.fadeOut();
+			$projects.fadeOut();
+			$bonus.fadeOut();
+		});
+		$e.click(function(){
+			$bonus.fadeIn();
+			$home.fadeOut();
+			$about.fadeOut();
+			$projects.fadeOut();
+			$contact.fadeOut();
+		});
+	});
+
+
+</script>
+
+</body>
+</html>
